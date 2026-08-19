@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-pyright.pyright", // If using TypeScript/Python for manifest handling
+    "dbaeumer.vscode-eslint", // For JavaScript/TypeScript linting
+    "esbenp.prettier-vscode", // For code formatting
+    "firefox-devtools.vscode-firefox-debug", // For Firefox debugging
+    "ms-vscode.vscode-chrome-debug" // For Chrome debugging
+  ]
+}

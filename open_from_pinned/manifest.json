@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "TSC Pinned Tab Helper",
+  "version": "1.0",
+  "description": "Open links from Canvas and TSC Resources in new tabs only when pinned.",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://tscfl.instructure.com/*",
+        "https://www.tsc.fl.edu/about/resources/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
