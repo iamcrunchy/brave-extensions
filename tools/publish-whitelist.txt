@@ -1,0 +1,18 @@
+# Required extension files
+manifest.json
+
+# Runtime file types
+*.js
+*.json
+*.html
+*.css
+
+# images
+*.png
+*.jpg
+*.svg
+
+# Runtime resour*e folders
+icons\**
+images\**
+_locales\**

@@ -1,0 +1,17 @@
+# Test files
+*.test.js
+*.spec.js
+
+# Development artifacts
+*.log
+*.tmp
+
+# Source maps
+*.map
+
+# IDE artifacts
+.vscode\
+
+# OS artifacts
+Thumbs.db
+.DS_Store

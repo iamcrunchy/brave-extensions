@@ -1,0 +1,9 @@
+{
+  "publishRoot": "C:\\Users\\Jim.Quinn\\Documents\\browser-extensions",
+  "whitelistFile": "publish-whitelist.txt",
+  "excludeFile": "publish-exclude.txt",
+  "rollbackEnabled": false,
+  "extensions": {
+    "open_from_pinned": {}
+  }
+}

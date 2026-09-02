@@ -11,7 +11,8 @@
     {
       "matches": [
         "https://tscfl.instructure.com/*",
-        "https://www.tsc.fl.edu/about/resources/*"
+        "https://www.tsc.fl.edu/about/resources/*",
+        "https://mail.proton.me/u/5/inbox"
       ],
       "js": ["content.js"],
       "run_at": "document_idle"
