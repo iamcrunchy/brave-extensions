@@ -3,6 +3,46 @@ param (
   [string]$Extension
 );
 
+# if no extension is specified, list extensions and prompt user to select one
+while (-not $Extension){
+  Write-Host "";
+  Write-Host "Available extensions:";
+  Write-Host "";
+
+  for ($i = 0; $i -lt $ExtensionNames.Count; $i++) {
+    Write-Host "$($i + 1). $($ExtensionNames[$i])";
+  }
+
+  Write-Host "";
+
+  $Selection = Read-Host "Select extension number";
+
+  if ($Selection -eq 0){
+    Write-Host '';
+    Write-Host "Publish operation cancelled by user.";
+    exit 0;
+  }
+
+  # validate selection
+  if ($Selection -notmatch '^\d+$'){
+    Write-Host '';
+    Write-Host "Invalid Selection. Please select a number between 1 and $($ExtensionNames.Count).";
+  }
+
+  $selectionIndex = [int]$Selection - 1;
+
+  if (($selectionIndex -lt 0) -or ($selectionIndex -ge $ExtensionNames.Count)){
+    Write-Host '';
+    Write-Host "Invalid Selection. Please select a number between 1 and $($ExtensionNames.Count).";
+  }{
+    Write-Host "";
+    Write-Host "Selection is out of range.";
+    continue;
+  }
+
+  $Extension = $ExtensionNames[$Selection - 1];
+}
+
 # validate extension names
 if ($Extension -notin $ExtensionNames){
   throw "Exension '$Extension' is not registered in the configuration file.";
